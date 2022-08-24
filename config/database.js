@@ -5,13 +5,13 @@ require('dotenv').config()
 
 
 const knex = require("knex")({
-  client: process.env.CLIENT,
+  client: process.env.DBCLIENT,
   connection: {
     user:process.env.DBUSER,
     host: process.env.DBHOST,
-    password: process.env.PASSWORD,
+    password: process.env.DBPASSWORD,
     database: process.env.DATABASE,
-    port:process.env.PORT
+    port:process.env.DBPORT
   }
 });
 

@@ -6,7 +6,7 @@ const route = require("./routes/route");
 
 app.use(express.json());
 app.use(route);
-const PORT = 5050;
+const PORT = process.env.PORT||8010
 
 app.listen(PORT, () => {
   console.log(`Your server is listening on http://localhost:${PORT}`);

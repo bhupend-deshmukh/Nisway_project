@@ -1,7 +1,8 @@
 const knex = require("../config/database");
 
 const getAllData = (req, res) => {
-  const sort = req.query.sort || "Title";
+  console.log('heee');
+  const sort = req.query.sort || "Job_Title";
   const order = req.query.order || "asc";
   const currency = req.query.currency;
 
@@ -19,6 +20,8 @@ const getAllData = (req, res) => {
         }else{
             res.send({"status":"success","count":data.length,'data':data})
         }
+    }).catch((err)=>{
+      console.log(err);
     });
 };
 
